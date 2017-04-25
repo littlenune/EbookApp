@@ -9,12 +9,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book"/>
+        android:text="Book"
+        android:onClick="refreshBooks"/>
 
     <ListView
-        android:id="@+id/listView_topic_list"
+        android:id="@+id/listView_book_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     </ListView>
 
 </LinearLayout>
