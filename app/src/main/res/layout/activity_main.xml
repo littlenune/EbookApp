@@ -10,8 +10,9 @@
         android:id="@+id/refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        <!--android:onClick="fetchAllBooks"-->
         android:text="Refresh" />
+        <!--android:onClick="fetchAllBooks"-->
+
 
     <ListView
         android:id="@+id/listView_booklist"
