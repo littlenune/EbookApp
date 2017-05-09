@@ -20,12 +20,25 @@ public class Book {
         this.imageSrc = imageSrc;
     }
 
-    public String getImageSrc() { return imageSrc; }
-    public void setImageSrc(String imageSrc) { this.imageSrc = imageSrc; }
-    public double getPrice() { return price; }
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-    public void setPrice(int price) { this.price = price; }
+    public double getPrice() {
+        return price;
+    }
+
+    public String getImageSrc() {
+        return imageSrc;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -48,6 +61,8 @@ public class Book {
     }
 
     public String toString(){
-        return title + " " + price + " " + imageSrc;
+        return "TITLE : "+ title + "\n ID : " + id + "\n PRICE: "  + price + "\n YEAR: " + year;
     }
+
+
 }
