@@ -1,6 +1,4 @@
-package com.example.nune.ebookapp.model;
-
-import android.widget.ListView;
+package com.example.softspec.ebookapp.model;
 
 import java.util.ArrayList;
 import java.util.List;

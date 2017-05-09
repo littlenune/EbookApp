@@ -1,6 +1,6 @@
-package com.example.nune.ebookapp.List;
+package com.example.softspec.ebookapp.List;
 
-import com.example.nune.ebookapp.model.Book;
+import com.example.softspec.ebookapp.model.Book;
 
 import java.util.ArrayList;
 

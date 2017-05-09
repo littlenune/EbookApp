@@ -1,13 +1,14 @@
-package com.example.nune.ebookapp.List;
+package com.example.softspec.ebookapp.List;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.example.nune.ebookapp.R;
-import com.example.nune.ebookapp.model.Book;
-import com.example.nune.ebookapp.model.BookRepository;
-import com.example.nune.ebookapp.model.RemoteBookRepository;
+import com.example.softspec.ebookapp.model.Book;
+import com.example.softspec.ebookapp.model.BookRepository;
+import com.example.softspec.ebookapp.model.RemoteBookRepository;
+
 import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity implements BookListView {

@@ -1,4 +1,4 @@
-package com.example.nune.ebookapp.model;
+package com.example.softspec.ebookapp.model;
 
 import java.util.List;
 import java.util.Observable;

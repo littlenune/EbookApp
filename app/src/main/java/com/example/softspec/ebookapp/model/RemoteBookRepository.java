@@ -1,4 +1,4 @@
-package com.example.nune.ebookapp.model;
+package com.example.softspec.ebookapp.model;
 
 import android.os.AsyncTask;
 

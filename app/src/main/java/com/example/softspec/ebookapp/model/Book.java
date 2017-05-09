@@ -1,4 +1,4 @@
-package com.example.nune.ebookapp.model;
+package com.example.softspec.ebookapp.model;
 
 /**
  * Created by nune on 4/20/2017 AD.
