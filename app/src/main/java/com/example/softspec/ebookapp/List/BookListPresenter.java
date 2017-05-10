@@ -34,4 +34,6 @@ public class BookListPresenter implements Observer {
             view.setBookList(books);
         }
     }
+
+
 }

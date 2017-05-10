@@ -10,5 +10,4 @@ import java.util.Observable;
 public abstract class BookRepository extends Observable {
     public abstract void fetchAllBooks();
     public abstract List<Book> loadBooks();
-//    public abstract List<Book> searchBooks();
 }
