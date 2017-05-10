@@ -14,7 +14,7 @@
         >
 
         <EditText
-            android:hint="Search your book ..."
+            android:hint="Search your book..."
             android:id="@+id/editText"
             android:layout_width="178dp"
             android:layout_height="wrap_content"
@@ -44,7 +44,6 @@
             android:layout_width="83dp"
             android:layout_height="wrap_content"
             android:text="year"
-            android:checked="false"
             android:onClick="searchID"
             />
 
@@ -58,8 +57,7 @@
         android:layout_height="wrap_content"
         android:text="Refresh"
         android:onClick="loadBooks" />
-
-
+    
 
     <ListView
         android:id="@+id/listView_booklist"
