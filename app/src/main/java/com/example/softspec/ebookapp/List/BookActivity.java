@@ -2,6 +2,7 @@ package com.example.softspec.ebookapp.List;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.example.nune.ebookapp.R;
@@ -32,6 +33,8 @@ public class BookActivity extends AppCompatActivity implements BookListView {
         presenter.initialize();
 
 
+
+
     }
 
     @Override
@@ -42,5 +45,9 @@ public class BookActivity extends AppCompatActivity implements BookListView {
 
     private ArrayAdapter<Book> createAdapter(ArrayList<Book> books){
         return new ArrayAdapter<Book>(this,android.R.layout.simple_list_item_1,books);
+    }
+
+    public void loadBooks(View view) {
+        presenter.initialize();
     }
 }

@@ -46,6 +46,11 @@ public class RemoteBookRepository extends BookRepository {
         return books;
     }
 
+//    @Override
+//    public List<Book> searchBooks() {
+//
+//    }
+
     public class BookFetcherTask extends AsyncTask<Void,Void,ArrayList<Book>> {
 
         @Override
