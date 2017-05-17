@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:weightSum="1">
 
         <EditText
             android:hint="Search your book..."
@@ -22,7 +22,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"
+            android:layout_weight="1.03" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -39,25 +40,41 @@
             android:onClick="searchID"
             />
 
-        <RadioButton
-            android:id="@+id/yearBtn"
-            android:layout_width="83dp"
-            android:layout_height="wrap_content"
-            android:text="year"
-            android:onClick="searchID"
-            />
+            <RadioButton
+                android:id="@+id/yearBtn"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:onClick="searchID"
+                android:text="year" />
 
         </RadioGroup>
 
     </LinearLayout>
 
+    <CheckBox
+        android:id="@+id/sortTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="sortTitleBtn"
+        android:text="Sort by title" />
+
+    <CheckBox
+        android:id="@+id/sortYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Sort by year"
+        android:onClick="sortYearBtn"
+        />
+
     <Button
         android:id="@+id/refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Refresh"
-        android:onClick="loadBooks" />
-    
+        android:onClick="loadBooks"
+        android:text="Refresh" />
+
 
     <ListView
         android:id="@+id/listView_booklist"
