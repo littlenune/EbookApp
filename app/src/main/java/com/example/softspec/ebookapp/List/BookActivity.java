@@ -36,8 +36,9 @@ public class BookActivity extends AppCompatActivity implements BookListView {
     Button titleBtn;
     Button yearBtn;
     RadioGroup radioGroup;
-    CheckBox sortTitle;
-    CheckBox sortYear;
+    RadioGroup radioGroup2;
+    Button sortTitle;
+    Button sortYear;
     int id;
 
     @Override
@@ -58,8 +59,10 @@ public class BookActivity extends AppCompatActivity implements BookListView {
         yearBtn = (Button) findViewById(R.id.yearBtn);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
-        sortTitle = (CheckBox) findViewById(R.id.sortTitle);
-        sortYear = (CheckBox) findViewById(R.id.sortYear);
+        sortTitle = (Button) findViewById(R.id.sortTitle);
+        sortYear = (Button) findViewById(R.id.sortYear);
+        radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
+
 
         id = titleBtn.getId();
 
@@ -104,11 +107,11 @@ public class BookActivity extends AppCompatActivity implements BookListView {
     public void searchByTitle(String textToSearch){
         ArrayList<Book> searchBook = new ArrayList<Book>();
         for ( Book b : presenter.books){
-           if ( b.getTitle().toLowerCase().contains(textToSearch.toLowerCase())){
-               searchBook.add(b);
-           }
-       }
-       updateAdapter(searchBook);
+            if ( b.getTitle().toLowerCase().contains(textToSearch.toLowerCase())){
+                searchBook.add(b);
+            }
+        }
+        updateAdapter(searchBook);
     }
 
     public void searchByYear(String textToSearch){
@@ -164,21 +167,21 @@ public class BookActivity extends AppCompatActivity implements BookListView {
 
 
     public void sortTitleBtn(View v) {
-        if (((CheckBox) v).isChecked()) {
+        if (((RadioButton) v).isChecked()) {
             Toast.makeText(this,
                     "Sort by title", Toast.LENGTH_SHORT).show();
             sortByTitle();
         }else {
-            presenter.initialize();
+            searchByTitle(editText.getText().toString());
         }
     }
     public void sortYearBtn(View v) {
-        if (((CheckBox) v).isChecked()) {
+        if (((RadioButton) v).isChecked()) {
             Toast.makeText(this,
                     "Sort by year", Toast.LENGTH_SHORT).show();
             sortByYear();
         }else {
-            presenter.initialize();
+            searchByTitle(editText.getText().toString());
         }
     }
 
