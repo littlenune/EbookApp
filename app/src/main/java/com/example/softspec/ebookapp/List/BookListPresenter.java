@@ -1,5 +1,6 @@
 package com.example.softspec.ebookapp.List;
 
+import com.example.nune.ebookapp.R;
 import com.example.softspec.ebookapp.model.Book;
 import com.example.softspec.ebookapp.model.BookRepository;
 
@@ -34,6 +35,7 @@ public class BookListPresenter implements Observer {
             view.setBookList(books);
         }
     }
+
 
 
 }
