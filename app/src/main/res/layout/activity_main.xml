@@ -46,29 +46,38 @@
 
         </RadioGroup>
 
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/sortTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="sortTitleBtn"
+                android:text="Sort by title" />
+
+            <RadioButton
+                android:id="@+id/sortYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="sortYearBtn"
+                android:text="Sort by year" />
+
+        </RadioGroup>
+
     </LinearLayout>
 
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <RadioButton
-        android:id="@+id/sortTitle"
-        android:layout_width="419dp"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:onClick="sortTitleBtn"
-        android:text="Sort by title" />
 
-    <RadioButton
-        android:id="@+id/sortYear"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
-        android:onClick="sortYearBtn"
-        android:text="Sort by year" />
-    </RadioGroup>
-
+        android:text="Profile" />
 
     <Button
         android:id="@+id/refresh"
