@@ -17,7 +17,7 @@ import static com.example.softspec.ebookapp.List.BookActivity.user;
  */
 
 public class ProfileActivity extends AppCompatActivity {
-//    Profile customer;
+
     TextView txtBalance;
     Button fundBtn;
     Button homeBtn;
@@ -36,8 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
         homeBtn = (Button) findViewById(R.id.homeBtn);
         cartBtn = (Button) findViewById(R.id.cartBtn);
         mybookBtn = (Button) findViewById(R.id.mybooklist);
-
-
+        
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +64,6 @@ public class ProfileActivity extends AppCompatActivity {
         if(fundBtn.isClickable()) {
             addMoney(fundBtn);
         }
-
     }
 
     public void addMoney(Button b){
@@ -74,9 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 user.setBalance(user.getBalance()+500);
-//               newBalance = Double.parseDouble(txtBalance.getText().toString()) + 500;
                 txtBalance.setText(""+user.getBalance());
-
             }
         });
     }

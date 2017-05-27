@@ -35,20 +35,16 @@ import java.util.Comparator;
 public class BookActivity extends AppCompatActivity implements BookListView {
 
     public static ArrayList<Book> cartArrayList = new ArrayList<Book>();
-    ListView cartListView;
+    public static Profile user = new Profile();
+
+    ListView bookListView,cartListView;
     ArrayAdapter<Book> bookAdapter;
     BookListPresenter presenter;
-    ListView bookListView;
     EditText editText;
-    Button titleBtn;
-    Button yearBtn;
-    RadioGroup radioGroup;
-    RadioGroup radioGroup2;
-    Button sortTitle;
-    Button sortYear;
-    Button profile;
+    Button titleBtn, yearBtn, sortTitle, sortYear, profile;
+    RadioGroup radioGroup, radioGroup2;
+
     int id;
-    public static Profile user = new Profile();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,7 +78,11 @@ public class BookActivity extends AppCompatActivity implements BookListView {
             }
         });
 
+        searchBar();
 
+    }
+
+    public void searchBar(){
         id = titleBtn.getId();
 
         editText = (EditText) findViewById(R.id.editText);

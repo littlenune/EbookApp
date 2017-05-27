@@ -25,12 +25,12 @@ import static com.example.softspec.ebookapp.List.BookActivity.user;
 
 public class CartListActivity extends AppCompatActivity {
 
-    Button homeBtn;
-    Button purchaseBtn;
+    ArrayAdapter<Book> cartAdapter;
+
+    Button homeBtn, purchaseBtn;
     TextView totalPurchase;
     ListView cartList;
-    ArrayAdapter<Book> cartAdapter;
-    public  ArrayList<Book> mybookList = new ArrayList<Book>();
+
     double sum;
 
     @Override
@@ -46,8 +46,6 @@ public class CartListActivity extends AppCompatActivity {
         totalPurchase = (TextView) findViewById(R.id.showSum);
         totalPurchase.setText(""+sumPrice(BookActivity.cartArrayList));
 
-
-
         homeBtn = (Button) findViewById(R.id.homeBtn2);
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +55,11 @@ public class CartListActivity extends AppCompatActivity {
             }
         });
 
+      purchase();
+
+    }
+
+    public void purchase(){
         purchaseBtn = (Button) findViewById(R.id.purchaseBtn);
         purchaseBtn.setOnClickListener(new AdapterView.OnClickListener() {
 
@@ -66,7 +69,6 @@ public class CartListActivity extends AppCompatActivity {
                 alertDialog.setTitle("Alert");
                 alertDialog.setMessage("Buy?");
                 alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

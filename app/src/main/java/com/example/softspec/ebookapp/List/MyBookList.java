@@ -37,9 +37,5 @@ public class MyBookList extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
 }
